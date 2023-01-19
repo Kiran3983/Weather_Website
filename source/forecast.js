@@ -13,9 +13,11 @@ const forecast = (lattitude , longitude , callback ) => {
             callback('Unable to find location !!!' , undefined)
         } else {
             callback(undefined , 'Weather description =  ' + response.body.current.weather_descriptions[0] + '. It is currently  ' + response.body.current.temperature + ' fahrenheit out there.'
-            + 'It feels like  ' + response.body.current.feelslike + ' fahrenheit out there.')
+            + 'It feels like  ' + response.body.current.feelslike + ' fahrenheit out there. The humidity out there is ' + response.body.current.humidity + '%.')
         }
     })
 }
 
 module.exports = forecast
+
+// The line " The humidity out there is ' + response.body.current.humidity + '.'" is added in file "21_Deployement_Workflow.js"
