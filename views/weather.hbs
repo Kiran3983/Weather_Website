@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/clouds.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+<body>
+    {{>header}} {{! Here we are accessing header.hbs}}
+    <h1> Weather Page </h1>
+
+
+        
+    <p> The weather at {{Location}} is {{Forecast}} </p>
+    {{>footer}} {{! Here we are accessing footer.hbs}}
+
+</body>
+
+</html>
+
+
+{{! 
+    <title>Weather</title>        // title for web-page in opened tab
+    Add title element in head element of html
+}}
+
+{{!
+    <link rel="icon" href="/img/clouds.png">
+    This is to add icon in tab on browser
+}}

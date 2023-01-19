@@ -1,4 +1,4 @@
-/* 
+/* Integrating git :
 In this section we're going to initialize Git in the 'web_server' folder. Once our project is under version 
 control we'll be able to track changes to all of our application files. When we want to use Git we have to 
 explicitly initialize it in the project where we're trying to use it. For us that means we need to run a 
@@ -84,4 +84,115 @@ Now you'll notice that up above 'node_modules' is now grayed out in color.This i
 us know that while this thing exists it has been ignored by version control.
 We can still open it and look at what's inside. Everything's just shown in a lighter gray to signify that 
 it's ignored.
+
+We can now use 'git add' to add things to that staging area. When we use 'git add' we have to list out
+the things that we want to add. In this case we can list out things we are seeing here in untracked files.
+We could list out individual files or entire directories.
+e.g. git add Source/
+It's going to add all of the files in the source directory to the staging area meaning they're ready to be 
+committed. We can run 'git status' to see that. Under untracked files you'll notice that the 'Source'
+directory is no longer listed. That's because we've added it to the staging area so it's showing up, 
+up above under changes to be committed. Now we could choose to make a commit with just these files init or 
+we can track all of the files that we have listed down below untracked files as well.
+Command --- git status
+Output --- 
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   source/01_Hello_Express.js
+        new file:   source/02_HTML_JSON.js
+        new file:   source/03_Serving_Up_Static_Assets.js
+        new file:   source/04_Dynamic_Pages_With_Templating.js
+        new file:   source/05_Customizing_Views_Directory.js
+        new file:   source/06_Advanced_Templating.js
+        new file:   source/07_Setting_404_Page.js
+        new file:   source/08_Challenge_Error_Page.js
+        new file:   source/09_Styling_Application.js
+        new file:   source/10_The_Query_String.js
+        new file:   source/11_Challenge_for_Weather_Endpoint.js
+        new file:   source/12_Building_JSON_HTTP_Endpoint.js
+        new file:   source/13_ES6_Default_Function_Parameter.js
+        new file:   source/14_Using_Default_Function_Parameter.js
+        new file:   source/15_Browser_HTTP_Requests_With_Fetch.js
+        new file:   source/16_Joining_Heroku_and_GitHub.js
+        new file:   source/17_Integrating_Git.js
+        new file:   source/forecast.js
+        new file:   source/geocode.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        Public/
+        package-lock.json
+        package.json
+        partials/
+        views/
+
+
+Git add gives us a shortcut to add everything i.e. ' git add . ' This is going to add everything to the 
+staging area which in this case means everything listed under untracked files.
+So we'll use 'git add .' , then we'll run 'git status' once again and we can see that now we have a whole 
+bunch of files listed under changes to be committed. We no longer have that untracked file section because 
+there are no untracked files left.
+
+Now that our staging area is set up , we can actually create the commit and we do that using 'git commit'.
+We have to provide a message with each commit, describing what exactly changed. We do that by providing the 
+m flag followed by our message inside of quotes. And for the first commit, something like initial commit
+or init commit is typically used.
+e.g. git commit -m "Init commit"
+     git commit -m "Adding new feature to allow people to communicate privately"
+     git commit -m "Adding support for image uploading"
+
+Once we ran the command git commit -m "Init commit" , new commit is created. So at this point we have one 
+commit inside of our Git repository and you'll notice over here that all of the files are back to their 
+default color because now they are not new untracked files. As we make changes to our application though
+the colors will change once again.
+e.g. If we make changes inside files that git is already tracking , these files will be shown in orange.
+
+As we make changes in file like adding new functions or fixing bugs , we can add these files to the 
+staging area and create another commit. After editing the files , check git status to confirm that changes
+are made. Then you can actually add this to the staging area using git add. Run Git status again before 
+committing, just to make sure everything looks right. Then run git commit  to create new commits.
+
+Commands: 
+git --version --- To check the version of installed git
+git init      --- To initialize the git
+git status    --- To print the current status of our setup
+git add       --- To add files to statging area
+git add .     --- To add all files to staging area
+git commit    --- To create new commits
+
+*/
+
+/*
+
+Challenge: Put the notes app under version control
+    1. Initialize a new repository in project directory
+    2. Ignore node_modules
+    3. Commit all files to the repository
+
+Solution:
+1. Initialize new repo/repository for Notes_Taking_App project buy running 'git init' from root of the project
+i.e. from  'Notes_Taking_App' directory.
+command --- git init
+output  --- Initialized empty Git repository in F:/Node JS/Node JS Programs/Note_Taking_App/.git/
+            All files turns to be green in color.
+
+2. Ignore 'node_modules' directory by creating new file '.gitignore' and listing 'node_modules/' in it.
+Output --- 'node_modules' file gets gray in color.
+
+3. Add all files to staging area
+command --- git add .  (to add everything to staging area)
+command --- git status (to check status of our setup)
+output  --- All files from Note_Taking_App will be seen under 'Changes to be committed'
+            No files will be under 'untracked files'
+
+4. Create a new commit
+command --- git commit -m "Init commit"
+output  --- For all files you will see create mode is used. All files will retrieve its original color.
+
+Now Notes app is under version control. If we were to make changes to the application in the future
+we would be able to track those changes as well.
+
 */

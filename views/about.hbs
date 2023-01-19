@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>About Page</title>
+    <link rel="icon" href="/img/clouds.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}} {{! Here we are accessing header.hbs}}
+        <h1> {{title}}</h1> {{! Here we are accessing property value from 06_Advanced_Templating.js}}
+        <img class="portrait" src="/img/photo.jpg">
+        <p> NAME : {{name}}</p>
+        <p> This site is created by {{name}} Adamapure. It gives weather forecast for given address.It uses mapbox's geocode and weatherstack API to fetch the weather.</p>
+    </div>
+
+    {{>footer}} {{! Here we are accessing footer.hbs}}
+</body>
+
+</html>
+
+{{!
+<title>About Page</title> // title for web-page in opened tab
+Add title element in head element of html
+}}
+
+{{!
+<link rel="icon" href="/img/clouds.png">
+This is to add icon in tab on browser
+}}

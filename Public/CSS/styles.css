@@ -1,0 +1,89 @@
+/* 
+h1 {
+   color : gray ;
+}
+
+img{
+    width: 250px ;
+} 
+
+ We need to add this css file to html files that we have created. We will use 'link' element to do that.
+ The link element is a empty element means it doesnot have a closing tag.
+ The link element has two attributes , these are-key value pairs. The first one is 'rel' which is 
+ short for relationship (what exactly we are linking in e.g. stylesheet). The second attribute is
+ 'href' , this is the path to the file we're trying to load i.e. relative path 
+(Above code is commented after its use bcz I am going to change it. By commenting the above code I kept 
+it for future reference of mine.)
+ */
+
+
+/* Lec 50- Styling_Application */
+
+body {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    /* This is to make footer sticks at bottom */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* 100% of viewport height i.e. equals to browser's height */
+}
+
+.main-content {
+    flex-grow: 1;  /* It means main-content should take up all leftover space */
+}
+
+footer {
+    color: #9e3535;
+    border: 3px solid black;
+    background-color: rgb(155, 182, 155);
+    padding: 16px;
+    text-align: center;
+}
+
+header {
+    margin: 6px;
+    padding: 4px;
+    border: 3px solid black;
+    background-color: rgb(155, 182, 155);
+    text-align: center;
+}
+
+header a{
+    margin-right: 16px;
+    padding: 6px;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+.portrait  {           /* using class name to target the specific img else all images get styled*/
+    width: 200px;
+}
+
+/* Lec 59 - Here we are customizing the input form */
+
+input{
+    border: 1px solid #cccccc;
+    padding: 8px;
+
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Help Page</title>
+    <link rel="icon" href="/img/clouds.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    {{>header}} {{! Here we are accessing header.hbs}}
+    <h1>Help Page</h1>
+    <h1> {{help_msg}} </h1>
+    {{>footer}} {{! Here we are accessing footer.hbs}}
+</body>
+
+</html>
+
+{{! 
+    <title>Help Page</title>        // title for web-page in opened window
+    Add title element in head element of html
+}}
+
+{{!
+    <link rel="icon" href="/img/clouds.png">
+    This is to add icon in tab on browser
+}}

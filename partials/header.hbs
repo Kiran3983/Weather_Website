@@ -1,0 +1,20 @@
+<header>
+    <h1> Static Header.hbs Text </h1> {{! Providing static text}}
+
+    <h1> {{Page_Name}}</h1> {{! Providing dynamic text}}
+
+        <a href="/">Homepage</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
+        <a href="/weather">Weather</a>
+</header>
+
+{{! HTML provides us with a header element which we can use to house our footer content.
+Using this we can target everything that belongs to header using CSS }}
+
+
+{{! This is syntax to add comments in .hbs}}
+{{! Whenever we access this file from other handlebars files , all data from this file wiil be accessed}}
+{{! The value of 'Page_Name' property will be different on each page , as the value of 'Page_Name'
+property is taken from objects created in 06_Advanced_Templating.js}}
+{{! Inside div we have given different links to different pages to create a navigation bar }}

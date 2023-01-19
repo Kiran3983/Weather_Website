@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Homepage</title>
+    <link rel="icon" href="/img/clouds.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}} {{! Here we are accessing header.hbs}}
+        <h1> {{title}}</h1> {{! Here we are accessing property value from 06_Advanced_Templating.js}}
+        <p>This website is used to get the weather information. This site uses both Geocode and Weatherstack APIs.
+            Goal here is that enable the user to access weather information about the different locations.
+            All he/she needs to do is, provide the correct address for which he/she wants the forecast info.</p>
+
+        <form>
+        <input placeholder="Location">
+        <button>Search</button>
+        </form>
+
+        <p id="message-1" ></p>
+        <p id="message-2"></p> 
+    
+    </div>
+
+    {{>footer}} {{! Here we are accessing footer.hbs}}
+    <script src="/js/App.js"></script>
+</body>
+
+</html>
+
+{{!
+Here we have given footer outside the div element. Add anything except footer in div so that
+we can style it and using flex-box technique we can make footer sticky at bottom.
+As we have created this div element for index route only i.e. for homepage
+footer of homepage will stick to bottom. To apply this changes to all routes you have to make
+same changes in all hbs templates i.e. putting everything exccept footer inside <div> element.
+    (footer of about page is also moved to bottom)
+    Using flex-box technique <div> element will take all available space except the space that footer needs */
+        }}
+
+        {{! To see the changes in footer or anything on Homepage i.e. index page
+        you have to first delet index.html file }}
+
+        {{!
+        <title>Homepage</title> // title for web-page in opened window
+        Add title element in head element of html
+        }}
+
+        {{!
+        <link rel="icon" href="/img/clouds.png">
+        This is to add icon in tab on browser
+        }}
